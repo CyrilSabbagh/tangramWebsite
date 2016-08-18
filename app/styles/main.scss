@@ -12,30 +12,108 @@ $icon-font-path: '../fonts/';
 }
 
 /* Space out content a bit */
-body {}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Open Sans', sans-serif;
+}
 
 /* Custom page header */
 .header {
   .navbar {
     margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    color: #777;
+    padding: 15px 0;
+
+    .navbar-nav a:hover {
+      border-bottom: solid 2px #BBA0B2;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      margin-left: -100px; /* 50% of your logo width */
+      display: block;
+      padding: 0;
+      img {
+        width: 200px;
+      }
+    }
+
+    .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+      color: #555;
+      background-color: transparent;
+    }
   }
 }
 
 .landingSection {
+  //background-color: #4497ff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
-  background-color: #4497ff;
   .landingSlogan {
     font-size: 20px;
   }
 }
 
+.section {
+  .section-title{
+    text-align: center;
+  }
+  min-height: 500px;
+  &:nth-of-type(even){
+    background-color: #fff;
+    .section-title {
+      color: #BBA0B2;
+    }
+  }
+  &:nth-of-type(odd){
+    background-color: #CEE5F2;
+    background-image: url("../images/gplay.png");
+    .section-title {
+      color: #2f4858;
+    }
+  }
+}
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
 
+/* Responsive: Portrait tablets and down */
+@media only screen and (max-width: 768px) {
+
+  .header .navbar {
+    .navbar-brand {
+      margin-left: -75px;  /* 50% of your logo width */
+      img {
+        width: 150px;
+      }
+    }
+    // .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    //   color: #555;
+    //   background-color: inherit;
+    // }
+    .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #e7e7e7;
+      background-color: #ffffff;
+    }
+    .navbar-toggle {
+      border-color: #BBA0B2;
+      &:hover,&:active,&:focus {
+        background-color: #CEE5F2;
+      }
+      .icon-bar {
+        background-color: #BBA0B2;
+      }
+    }
+  }
 
 }
