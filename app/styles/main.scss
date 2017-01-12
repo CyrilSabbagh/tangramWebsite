@@ -20,6 +20,11 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
+.main-container .row{
+  padding: 0 2%;
+  padding-bottom: 50px;
+}
+
 /* Custom page header */
 .header {
   .navbar {
@@ -55,26 +60,66 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-.landingSection {
+.section.landingSection {
   //background-color: #4497ff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding-top: 80px;
   .landingSlogan {
     font-size: 20px;
+  }
+  .tangramGame {
+    -webkit-box-shadow:
+        0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 14px #fff,
+                0px 0px 0px 18px rgba(0,0,0,0.2),
+                6px 6px 8px 17px #555;
+
+     -moz-box-shadow:
+        0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 14px #fff,
+                0px 0px 0px 18px rgba(0,0,0,0.2),
+                6px 6px 8px 17px #555;
+
+    box-shadow:
+        0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 14px #fff,
+                0px 0px 0px 18px rgba(0,0,0,0.2),
+                6px 6px 8px 17px #555;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    #tangramSvg {
+      .draggable{
+        cursor: move;
+      }
+  }
   }
 }
 
 .section {
-  .section-title{
+  min-height: 500px;
+  .section-title {
+    text-align: center;
+    margin: 25px 0;
+    padding-bottom: 10px;
+    //display: inline-block;
+  }
+  .section-desc {
+    font-size: 1.2em;
+    // line-height: 1.7em;
     text-align: center;
   }
-  min-height: 500px;
   &:nth-of-type(even){
     background-color: #fff;
     .section-title {
       color: #BBA0B2;
+      //border-bottom: solid 2px #BBA0B2;
+    }
+    .section-desc {
+      color: #2f4858;
     }
   }
   &:nth-of-type(odd){
@@ -82,10 +127,130 @@ h1,h2,h3,h4,h5,h6 {
     background-image: url("../images/gplay.png");
     .section-title {
       color: #2f4858;
+      //border-bottom: solid 2px #2f4858;
+    }
+    .section-desc {
+      color: #BBA0B2;
+    }
+  }
+  .team-desc {
+    padding: 0 80px;
+    img {
+      margin: auto;
+      margin-bottom: 30px;
+      border: solid 5px rgba(187, 160, 178, 0.5);
     }
   }
 }
 
+.centerDivContent {
+  text-align: center;
+}
+
+// Why Us Section
+.hexagon {
+  width: 130px;
+  height: 230px;
+  overflow: hidden;
+  visibility: hidden;
+  transform: rotate(120deg);
+  margin: auto;
+  margin-top: -50px;
+  border: solid 2px rgba(187, 160, 178, 0.4);
+
+  .hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    border: solid 2px rgba(187, 160, 178, 0.4);
+  }
+
+  .hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    transform: rotate(-60deg);
+    //background: url(attr(data-img));
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: auto 67%;
+    border: solid 2px rgba(187, 160, 178, 0.4);
+  }
+
+  .hexagon-in2:hover {
+  //  background: url("http://lorempixel.com/250/350");
+  }
+}
+
+.values-desc {
+  max-width: 230px;
+  margin: auto;
+  margin-top: -58px;
+}
+
+.services {
+    background-color: #ffffff;
+    /* margin: 5px 20px; */
+    min-height: 120px;
+    max-width: 350px;
+    margin: 5px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.services-section {
+  margin-top: 45px;
+}
+
+.services-shape-square {
+  width : 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  top: 50%;
+  margin-top: -40px;
+  background-color: red;
+  border: solid 2px brown;
+  transform: rotate(45deg);
+}
+
+.instaModal {
+  .modal-title {
+    display: inline-block;
+  }
+  .modal-title--avatar {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+
+  .modal-title--username {
+    color: #888888;
+    margin-left: 5px;
+  }
+
+  .instaModal--details {
+    font-style: normal;
+    display: inline-block;
+    padding: 2px 4px 0 4px;
+    font-size: 11px;
+    line-height: 15px;
+    background-color: #222960;
+    color: #fff;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-header .close {
+      margin-top: 3px;
+  }
+
+  .modal-footer {
+    text-align: center;
+  }
+}
 
 /* Responsive: Portrait tablets and down */
 @media only screen and (max-width: 768px) {
@@ -115,5 +280,38 @@ h1,h2,h3,h4,h5,h6 {
       }
     }
   }
+  .section .section-desc {
+    font-size: 1em;
+    padding-left: 7px;
+  }
 
+  #whySVG {
+    max-width: 300px;
+  }
+
+  .slider-menu {position: relative;}
+  .slider-menu .prev{left: 5px;}
+  .slider-menu .next{right: 5px;}
+
+
+  .instaModal {
+
+    .modal-header {
+      text-align: center;
+    }
+    .modal-title {
+      display: block;
+      text-align: center;
+    }
+
+    .modal-title--username {
+      color: #888888;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .modal-footer {
+      text-align: center;
+    }
+  }
 }

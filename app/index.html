@@ -19,6 +19,8 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="styles/instastream.css">
+    <!-- <link rel="stylesheet" href="/bower_components/pongstagr.am/source-min/pongstagr.am.min.css" charset="utf-8"> -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -45,67 +47,220 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
+              <li class="active"><a href="#">Why us <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Photos</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact us</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid main-container">
         <div class="row section landingSection">
           <span class="landingSlogan">"Events Shaping"</span>
+          <div class="tangramGame">
+            <svg id="tangramSvg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" viewBox="0 0 350 250">
+        			<g id="wrap-person">
+        				<g id="person">
+        					<polygon points="175.69,69.9 	195.59,50 		215.49,69.9 	195.59,89.8" 	style="fill:#dddddd" class="draggable" id="person1"></polygon>
+        					<polygon points="155.78,89.8 	195.59,129.61 	235.39,89.8" 					style="fill:#38bab1" class="draggable" id="person2"></polygon>
+        					<polygon points="175.26,109.23 	135.45,149.04 	215.06,149.04" 					style="fill:#38bab1" class="draggable" id="person3"></polygon>
+        					<polygon points="147.11,149.04 	175.25,149.04 	147.11,177.18 	118.96,177.18" 	style="fill:#dddddd" class="draggable" id="person4"></polygon>
+        					<polygon points="175.25,149.04 	215.06,149.04 	215.06,188.84" 					style="fill:#dddddd" class="draggable" id="person5"></polygon>
+        					<polygon points="100,167.94 	100,196.09 		128.15,167.94" 					style="fill:#38bab1" class="draggable" id="person6"></polygon>
+        					<polygon points="204.6,178.36 	204.6,206.51 	232.74,206.51" 					style="fill:#38bab1" class="draggable" id="person7"></polygon>
+        				</g>
+        			</g>
+        		</svg>
+          </div>
         </div>
         <div class="row section">
           <h1 class="section-title">Why Us?</h1>
-          <div class="col-xs-12">
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
             <p class="section-desc">
-              Just like the Tangram allows you to imagine an infinity of shapes and figures, based on the same 7 pieces; for us, an event is made of 7 elements that we can arrange in an infinity of ways, in order to obtain a unique, personalized and memorable result.
+              Just like the Tangram allows you to imagine an infinity of shapes and figures, based on the same 7 pieces. For us, an event is made of 7 elements that we can arrange in an infinity of ways, in order to obtain a unique, personalized and memorable result.
             </p>
+          </div>
+          <div class="col-xs-12 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2' data-img="../images/frame.jpg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Frame</h3>
+              <p>Every event begins with an occasion to celebrate, a date, a place and a number of people involved</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2' data-img="../images/menu.jpeg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Menu</h3>
+              <p>Because a party without food is just a meeting</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2'  data-img="../images/decoration2.jpeg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Decoration</h3>
+              <p>We care about the final touches from flowers to napkin rings</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-xs-12 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2' data-img="../images/entertain.jpg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Entertainment</h3>
+              <p>Just what you need to bring sparkles to your event</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2' data-img="../images/custom.jpg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Customized Items</h3>
+              <p>It’s all about those little things that show your event is tailored for you </p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2' data-img="../images/services.jpg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Services</h3>
+              <p>A successful event relies on special people and companies who add their experience to your D-Day</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-xs-12 col-sm-offset-4 col-sm-4 centerDivContent">
+            <div class='hexagon'>
+              <div class='hexagon-in1'>
+                <div class='hexagon-in2' data-img="../images/plume.jpg"></div>
+              </div>
+            </div>
+            <div class="values-desc">
+              <h3>Suprises</h3>
+              <p>Hahaha! You really think we’re going to tell you something about it! </p>
+            </div>
           </div>
         </div>
         <div class="row section">
           <h1 class="section-title">Services</h1>
+          <p class="section-desc" style="text-align:center;">Whether you chose one, two or all three options, we guarantee you an event of high Tangram standards</p>
+          <div class="services-section">
+            <div class="col-xs-12 col-sm-4">
+              <div class="services">
+                <div class="services-shape-square"></div>
+                <h3>Creation</h3>
+                <p>We could help you create your event: elaborate the concept and its 7 basic elements</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="services">
+                <h3>Implementation</h3>
+                <p>We could go further and take in charge the implementation of these 7 elements and all the necessary preparations prior to the event</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <div class="services">
+                <h3>Coordination</h3>
+                <p>We’ll be here to assist you, on your d-day and handle the coordination for you</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="row section">
           <h1 class="section-title">Latest Photos</h1>
+          <div id="insta" class="col-xs-12">
+
+          </div>
         </div>
         <div class="row section">
-          <h1 class="section-title">Portfolio</h1> <!-- Change to Stories??? -->
+          <h1 class="section-title">Work</h1> <!-- Change to Stories??? -->
         </div>
         <div class="row section">
-          <h1 class="section-title">Who we are?</h1> <!-- Change to About Us? -->
+          <h1 class="section-title">About</h1> <!-- Change to About Us? -->
+          <div class="col-xs-12 col-md-6 team-desc" style="text-align:center;">
+              <img class="img-responsive img-circle" src="http://placehold.it/200x200">
+              <strong class="name">Norma</strong>
+              <p class="desc" style="text-align:center;"><i>"Creativity is intelligence having fun !" – Albert Einstein</i><br> And I’ve been living it since ever… Engaged in many social and extra-curricular activities, I’ve always had an urge to innovate and introduce new ways to organize common activities. Constantly mixing creativity and perfectionism, I believe that originality lies in the smallest details… Driven by this thrive to break the trends and take this energy to a higher level, I have joined forces with my best friend, Nathalie, to create Tangram… our way of shaping events.</p>
+          </div>
+          <div class="col-xs-12 col-md-6 team-desc" style="text-align:center;">
+              <img class="img-responsive img-circle" src="http://placehold.it/200x200">
+              <strong class="name">Nathalie</strong>
+              <p class="desc" style="text-align:center;"><i>“You can’t use up creativity. The more you use, the more you have” – Maya Angelou</i><br> I live in a world where Harmony and Creativity meet. Ever since my childhood, I’ve been naturally attracted to organizing events: school projects, social and charity activities or even summer schools… while combining fresh ideas and organizational skills, I managed to progressively create my own signature. I met Norma at University and found in her the same passion for innovation and out of the box ideas… It is then that a fun and efficient duo was born!</p>
+          </div>
         </div>
         <div class="row section">
           <h1 class="section-title">Contact Us</h1>
+          <div class="col-md-offset-2 col-md-8">
+            <div role="form" dir="ltr">
+              <form action="/#wpcf7-f99-o1" method="post" novalidate="novalidate">
+              <p>Your Name (required)<br>
+                  </p><div class="form-group your-name"><input class="form-control" name="your-name" type="text" value="" aria-invalid="false" aria-required="true" required=""></div> <p></p>
+
+              <p>Your Email (required)<br>
+                  </p><div class="form-group your-email"><input class="form-control" name="your-email" type="email" value="" aria-invalid="false" aria-required="true" required=""></div> <p></p>
+
+              <p>Subject<br>
+                  </p><div class="form-group your-subject"><input class="form-control" name="your-subject" type="text" value="" aria-invalid="false"></div> <p></p>
+
+              <p>Your Message<br>
+                  </p><div class="form-group your-message"><textarea class="form-control" name="your-message" rows="4" aria-invalid="false"></textarea></div> <p></p>
+
+              <p></p><div class="form-group"><div><input class="btn btn-primary" type="submit" value="Send"></div><p></p><div class="alert"></div>
+              </form>
+            </div>
+          </div>
         </div>
     </div>
+
+    <div class="modal instaModal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Tangram</h4><span class="modal-title--username"></span>
+
+          </div>
+          <div class="modal-body">
+            <div class="modal-body--insta">
+
+            </div>
+          </div>
+          <div class="modal-footer">
+
+            <p class="instaModal--caption">
+
+            </p>
+            <div class="instaModal--details"></div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -120,7 +275,12 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="scripts/jquery.instastream.js" charset="utf-8"></script>
     <script src="/bower_components/velocity/velocity.min.js"></script>
+    <script src="/bower_components/Snap.svg/dist/snap.svg-min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/jquery.velocity.min.js" charset="utf-8"></script> -->
+    <!-- <script src="/bower_components/pongstagr.am/source-min/pongstagr.am.min.js" charset="utf-8"></script> -->
+    <!-- <script src="/bower_components/pongstagr.am/source/pongstagr.am.js" charset="utf-8"></script> -->
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -135,11 +295,11 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
     <!-- endbuild -->
-
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script src="scripts/tangram.js"></script>
   </body>
 </html>
